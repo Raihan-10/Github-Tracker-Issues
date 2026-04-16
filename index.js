@@ -51,28 +51,34 @@ function switchTab(tab) {
     allIssues(tab)
 }
 
+const spinner = document.getElementById('spinner');
+const container = document.getElementById('card-container');
 // all issues api
 const allIssues = (status = 'all') => {
+
+    spinner.classList.remove('hidden');
+    container.classList.add('hidden')
 
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues ")
         .then((res) => (res.json()))
         .then((json) => {
             let data = json.data;
-            if(status!=='all'){
-                data = data.filter(issues => issues.status ===status);
+            if (status !== 'all') {
+                data = data.filter(issues => issues.status === status);
             }
             displayAll(data)
-})
+            spinner.classList.add('hidden');
+            container.classList.remove('hidden')
+        })
 };
 
 // display issues
 const displayAll = (all) => {
 
-    const container = document.getElementById('card-container');
     container.innerHTML = " ";
 
     const countDisplay = document.getElementById('count');
-    if(countDisplay){
+    if (countDisplay) {
         countDisplay.innerText = all.length
     }
     for (let one of all) {
