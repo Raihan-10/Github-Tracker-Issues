@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>all-cards</title>
+  <!-- daisy UI and tailwindcss -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./all-cards.html"> -->
+  <style>
+    .font {
+      font-family: "Geist", sans-serif;
+      
+    }
+  </style>
+</head>
+
+<body class="bg-[#f8fafcFF] min-h-screen font">
+  <!-- navbar -->
+  <section class="bg-white">
+    <div class="navbar flex justify-between shadow-sm px-20">
+      <div class="logo flex flex-row items-center gap-1 ">
+        <img src="./assets/github-logo.png" class="w-9" alt="">
+        <h2 class="text-[#1f2937] leading-[1.2] text-2xl font-semibold">GitHub Issues Tracker</h2>
+      </div>
+      <div class="search flex gap-2">
+        <!-- <label for=""></label>
+            <input type="search" placeholder="🔍Search issues..."> -->
+        <button class=" search border border-[#e4e4e7] w-[300px] p-4 text-left flex items-center gap-1">
+          <svg width="16" xmlns="http://www.w3.org/2000/svg" height="16"
+            id="screenshot-1771fd7e-b0d6-550e-a5f3-274a7980109d" viewBox="2246 359 16 16"
+            style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none"
+            version="1.1">
+            <g id="shape-1771fd7e-b0d6-550e-a5f3-274a7980109d">
+              <defs>
+                <clipPath id="frame-clip-1771fd7e-b0d6-550e-a5f3-274a7980109d-render-4478"
+                  class="frame-clip frame-clip-def">
+                  <rect rx="0" ry="0" x="2246" y="359" width="16" height="16"
+                    transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)">
+                  </rect>
+                </clipPath>
+              </defs>
+              <g class="frame-container-wrapper" opacity="1">
+                <g class="frame-container-blur">
+                  <g class="frame-container-shadows">
+                    <g clip-path="url(#frame-clip-1771fd7e-b0d6-550e-a5f3-274a7980109d-render-4478)" fill="none">
+                      <g class="fills" id="fills-1771fd7e-b0d6-550e-a5f3-274a7980109d">
+                        <rect rx="0" ry="0" x="2246" y="359" width="16" height="16"
+                          transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+                          class="frame-background" style="fill:#ffffff;fill-opacity:0">
+                        </rect>
+                      </g>
+                      <g class="frame-children">
+                        <g id="shape-283e2e34-a8e3-5de0-a068-742fa4e11b46" style="opacity:1">
+                          <g class="fills" id="fills-283e2e34-a8e3-5de0-a068-742fa4e11b46">
+                            <path
+                              d="M2260.530517578125,372.4693908691406L2257.5625,369.5C2258.452392578125,368.3403015136719,2258.867919921875,366.885498046875,2258.724609375,365.43072509765625C2258.581298828125,363.9759521484375,2257.89013671875,362.6300964355469,2256.791015625,361.666259765625C2255.692138671875,360.702392578125,2254.267578125,360.1926574707031,2252.806396484375,360.240478515625C2251.345458984375,360.2882995605469,2249.957275390625,360.89007568359375,2248.923583984375,361.9237365722656C2247.889892578125,362.9573974609375,2247.2880859375,364.3455505371094,2247.240478515625,365.80657958984375C2247.192626953125,367.2676086425781,2247.702392578125,368.692138671875,2248.666259765625,369.7911682128906C2249.630126953125,370.89019775390625,2250.975830078125,371.5814514160156,2252.4306640625,371.7247009277344C2253.885498046875,371.867919921875,2255.340087890625,371.45245361328125,2256.5,370.5625L2259.470458984375,373.53375244140625C2259.540283203125,373.603515625,2259.623046875,373.65887451171875,2259.71435546875,373.6966247558594C2259.805419921875,373.734375,2259.903076171875,373.7538146972656,2260.001708984375,373.7538146972656C2260.100341796875,373.7538146972656,2260.1982421875,373.734375,2260.289306640625,373.6966247558594C2260.38037109375,373.65887451171875,2260.46337890625,373.603515625,2260.532958984375,373.53375244140625C2260.602783203125,373.4639892578125,2260.658203125,373.38116455078125,2260.69580078125,373.2900085449219C2260.733642578125,373.1988525390625,2260.753173828125,373.1011657714844,2260.753173828125,373.00250244140625C2260.753173828125,372.9038391113281,2260.733642578125,372.80615234375,2260.69580078125,372.7149963378906C2260.658203125,372.62384033203125,2260.602783203125,372.541015625,2260.532958984375,372.47125244140625L2260.530517578125,372.4693908691406ZM2248.75,366C2248.75,365.159423828125,2248.999267578125,364.3377380371094,2249.466064453125,363.6388244628906C2249.93310546875,362.9399108886719,2250.596923828125,362.39520263671875,2251.37353515625,362.0735168457031C2252.150146484375,361.7518310546875,2253.004638671875,361.6676940917969,2253.8291015625,361.8316650390625C2254.653564453125,361.99566650390625,2255.41064453125,362.4004211425781,2256.005126953125,362.99481201171875C2256.599609375,363.58917236328125,2257.004150390625,364.3464660644531,2257.168212890625,365.1708679199219C2257.332275390625,365.99530029296875,2257.248046875,366.8498229980469,2256.926513671875,367.62640380859375C2256.604736328125,368.4029846191406,2256.06005859375,369.0667419433594,2255.361083984375,369.53375244140625C2254.662109375,370.000732421875,2253.840576171875,370.25,2253,370.25C2251.873046875,370.24884033203125,2250.792724609375,369.80072021484375,2249.99609375,369.0039367675781C2249.19921875,368.2071533203125,2248.7509765625,367.1268310546875,2248.75,366Z"
+                              fill-rule="nonzero" style="fill:#64748b;fill-opacity:1">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span class="text-[#64748b]">Search issues...</span> </button>
+        <button class="border border-[#e4e4e7] py-4 px-3 bg-[#4a00ff] text-white rounded-sm">
+          <p class="flex justify-center items-center gap-1 "><i class="fa-solid fa-plus"></i>New Issue</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- left right padding -->
+  <section class="max-w-[1110px] mx-auto bg-[#fbfbfb]">
+
+    <!-- status button -->
+    <section class="card  bg-white mt-[60px] flex flex-row space-x-2 p-6">
+      <button onclick="switchTab('all')" id="all-btn" class="cursor-pointer w-[120px] rounded-sm text-white py-2 px-3 bg-[#4a00ff]">All</button>
+      <button onclick="switchTab('open')" id="open-btn" class="cursor-pointer w-[120px] rounded-sm py-2 px-3 border border-[#e4e4e7]">Open</button>
+      <button onclick="switchTab('closed')" id="closed-btn" class="cursor-pointer w-[120px] rounded-sm py-2 px-3 border border-[#e4e4e7]">Closed</button>
+    </section>
+
+
+    <section id="issues-container" class=" bg-white flex flex-row justify-between p-6 mt-4 rounded-t-2xl rounded-tr-2xl shadow-sm ">
+
+      <!-- All status -->
+      <div class="flex gap-2">
+        <img class="w-[50px]" src="./assets/Aperture.png" alt="">
+        <div class="issues flex flex-col justify-center">
+          <p class="text-[20px] font-semibold text-[#1f2937]"><span id="count"></span> Issues</p>
+          <p class="text-[16px] leading-[1.2] font-normal text-[#64748b]">Track and manage your project issues</p>
+        </div>
+      </div>
+
+      <!-- issues -->
+      <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-1">
+          <span class="w-3 h-3 rounded-full bg-[#10B981]"></span>Open
+        </div>
+        <span class="w-3 h-3 rounded-full bg-[#a855f7]"></span>Closed
+      </div>
+      <!-- </div> -->
+
+    </section>
+
+</section>
+<!-- spinner -->
+ <div id="spinner" class="flex justify-center mt-10">
+  <span class="loading loading-spinner text-green-500"></span>
+
+ </div>
+    <!-- card -->
+    <section id="card-container" class="max-w-[1110px] mx-auto mt-4 grid grid-cols-1 md:grid-cols-3 shadow-lg mb-5 bg-[#fbfbfb] gap-6 p-6">
+
+       <!-- <section class="w-[256px] bg-white h-full mt-1 p-4">
+         <div class="flex justify-between">
+           <img class="w-6 h-full" src="./assets/Open-Status.png" alt="">
+        <p class="priority w-20 bg-[#feecec] text-center rounded-2xl p-1"><span class="text-[#ef4444] text-[12px]">HIGH</span></p>
+      </div>
+      
+      <div class="">
+        <h3 class="font-semibold text-[14px] mb-2">Fix navigation menu on mobile devices</h3>
+        <p class="text-[12px] text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+        <div class="label flex items-center gap-5 rounded-2xl mt-3">
+          <span class=" bg-[#feecec] flex rounded-xl border px-2 py-1 border-[#fecaca] gap-2">
+            <img class="w-3" src="./assets/bug.png" alt=""><span
+              class="text-[12px] font-medium text-[#ef4444]">BUG</span></span>
+          <span class="bg-[#FFF8DB] flex items-center gap-1 border border-[#FDE68A] rounded-lg px-2">
+            <img class="w-4 h-4" src="./assets/help.png" alt=""><span class="">HELP WANTED</span></span>
+        </div>
+      </div>
+
+      <div class="mt-3 text-[#64748B] text-[12px] border-t border-t-[#64748B] pt-2 flex flex-col gap-1">
+        
+        <p class="">#1 by john_doe</p>
+        <p>1/15/2024</p>
+      </div>
+  
+    </section> -->
+  </section>
+
+
+    
+    <script src="./index.js"></script>
+</body>
+
+</html>

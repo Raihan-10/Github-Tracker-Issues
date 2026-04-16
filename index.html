@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <!-- daisy UI and tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./all-cards.html"> -->
+    <style>
+        .font {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f8fafc] flex items-center justify-center p-4 font">
+    <!-- homepage -->
+    <!-- card -->
+    <section class="w-[520px] bg-white rounded-lg p-8 mt-[85px] mb-[85px] shadow-sm">
+        <div class="card-container space-y-6">
+            <div class="header flex flex-col text-center justify-center items-center">
+                <img class="w-[100px] mb-6" src="./assets/github-logo.png" alt="">
+                <h2 class="text-[#1f2937FF] text-2xl mb-1 font-semibold">GitHub Issues Tracker</h2>
+                <p class="text-[16px] text-[#64748bFF]">Sign in to manage your issues</p>
+            </div>
+            <div class="form w-full" id="login-form">
+                <fieldset class="fieldset rounded-box">
+
+                    <label class="label font-medium text-[#1f2937FF] text-[16px]">Username</label>
+                    <input type="email" class="input w-full" id="user-name" placeholder="Enter Username" />
+                    <label class="label text-[#4a00ff]">Default: admin</label>
+                    <label class="label font-medium text-[#1f2937FF] text-[16px] mt-4">Password</label>
+                    <input type="password" class="input w-full" id="pass" placeholder="Enter Password" />
+                    <label class="label text-[#4a00ff]">Default: admin123</label>
+                    <a href="" class="btn bg-[#4a00ff] text-white mt-4 p-4" id="sign-in">Sign In</a>
+                </fieldset>
+
+            </div>
+
+            <!-- hr -->
+            <div class="hr flex justify-center items-center gap-2">
+                <hr class="w-[50%] text-[#e4e4e7FF]">OR
+                <hr class="w-[50%] text-[#e4e4e7FF]">
+            </div>
+            <div>
+                <div class="demo">
+                    <p class="text-[#64748b] text-center text-[14px]">Demo Credentials:</p>
+                </div>
+                <div class="userName-pass flex flex-col justify-center items-center mt-2 bg-[#f8fafc] p-6">
+                    <p class="text-[16px]"><span class=" font-semibold">Username:</span> admin</p>
+                    <p class="text-[16px]"><span class=" font-semibold">Password: </span>admin123</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
