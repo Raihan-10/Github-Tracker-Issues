@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>all-cards</title>
+
   <!-- daisy UI and tailwindcss -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -17,7 +19,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- <link rel="stylesheet" href="./all-cards.html"> -->
   <style>
     .font {
       font-family: "Geist", sans-serif;
@@ -33,7 +34,8 @@
     <div class="navbar flex flex-col md:flex-row justify-between shadow-sm md:px-20 gap-3 py-4">
       <div class="logo flex flex-row items-center gap-1 ">
         <img src="./assets/github-logo.png" class="md:w-9 w-8" alt="">
-        <h2 class="text-[#1f2937] leading-[1.2] text-lg md:text-2xl font-semibold cursor-pointer"><a href="./index.html">Issues Tracker</a> </h2>
+        <h2 class="text-[#1f2937] leading-[1.2] text-lg md:text-2xl font-semibold cursor-pointer"><a
+            href="./index.html">Issues Tracker</a> </h2>
       </div>
 
       <!-- search -->
@@ -56,7 +58,8 @@
   <section class="max-w-[1110px] mx-auto bg-[#fbfbfb] ">
 
     <!-- status button -->
-    <section class="card  bg-white mt-8 md:mt-[60px] flex md:flex-row justify-center md:justify-start gap-2 p-4 md:p-6 shadow-md">
+    <section
+      class="card  bg-white mt-8 md:mt-[60px] flex md:flex-row justify-center md:justify-start gap-2 p-4 md:p-6 shadow-md">
       <button onclick="switchTab('all')" id="all-btn"
         class="cursor-pointer flex-1 sm:flex-none min-w-[100px] rounded-sm text-white py-2 px-3 bg-[#4a00ff]">All</button>
       <button onclick="switchTab('open')" id="open-btn"
@@ -86,7 +89,6 @@
         <span class="w-3 h-3 rounded-full bg-[#a855f7]"></span>Closed
       </div>
       <!-- </div> -->
-
     </section>
 
   </section>

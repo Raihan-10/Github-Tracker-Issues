@@ -15,7 +15,7 @@ let signIn = document.getElementById('sign-in');
 if (signIn) {
 
     signIn.addEventListener('click', (event) => {
-        event.preventDefault();        
+        event.preventDefault();
         if (userName.value === 'admin' && password.value == 'admin123') {
             window.location.href = 'all-cards.html'
         }
@@ -51,6 +51,25 @@ function switchTab(tab) {
     allIssues(tab)
 }
 
+// all issues api
+const allIssues = (status = 'all') => {
+
+    spinner.classList.remove('hidden');
+    container.classList.add('hidden')
+
+    fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues ")
+        .then((res) => (res.json()))
+        .then((json) => {
+            let data = json.data;
+            if (status !== 'all') {
+                data = data.filter(issues => issues.status === status);
+            }
+            displayAll(data)
+            spinner.classList.add('hidden');
+            container.classList.remove('hidden')
+        })
+};
+
 const spinner = document.getElementById('spinner');
 const container = document.getElementById('card-container');
 const search = document.getElementById('search-input')
@@ -79,24 +98,6 @@ if (search) {
     })
 }
 
-// all issues api
-const allIssues = (status = 'all') => {
-
-    spinner.classList.remove('hidden');
-    container.classList.add('hidden')
-
-    fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues ")
-        .then((res) => (res.json()))
-        .then((json) => {
-            let data = json.data;
-            if (status !== 'all') {
-                data = data.filter(issues => issues.status === status);
-            }
-            displayAll(data)
-            spinner.classList.add('hidden');
-            container.classList.remove('hidden')
-        })
-};
 
 // display issues
 const displayAll = (all) => {
@@ -138,27 +139,27 @@ const displayAll = (all) => {
         }
 
         cardDiv.innerHTML = `
-       <div class>
-          <div class="flex justify-between items-center">
-      
-        <img class="" src="${statusIcon}" alt="">
-        <p class="priority w-20 bg-[#feecec] text-center rounded-2xl p-1">
-        <span class="text-[#ef4444] text-[12px]">${one.priority}</span></p>
-        </div>
+         <div class>
+            <div class="flex justify-between items-center">
+        
+            <img class="" src="${statusIcon}" alt="">
+            <p class="priority w-20 bg-[#feecec] text-center rounded-2xl p-1">
+            <span class="text-[#ef4444] text-[12px]">${one.priority}</span></p>
+            </div>
 
-      <div class="mt-2">
-        <h3 class="font-semibold text-[14px] mb-2">${one.title}</h3>
-        <p class="text-[12px] text-[#64748B]">${one.description}</p>
-        <div class="label flex items-center gap-5 rounded-2xl mt-3 flex-wrap">
-            ${labelsIcon}
+        <div class="mt-2">
+            <h3 class="font-semibold text-[14px] mb-2">${one.title}</h3>
+            <p class="text-[12px] text-[#64748B]">${one.description}</p>
+            <div class="label flex items-center gap-5 rounded-2xl mt-3 flex-wrap">
+                ${labelsIcon}
+            </div>
         </div>
-      </div>
 
       <div class="mt-3 text-[#64748B] text-[12px] border-t border-t-[#64748B] pt-2 flex flex-col gap-1">
         
         <p class="">#${one.id} ${one.author}</p>
         <p>${new Date(one.createdAt).toLocaleDateString()}</p>
-      </div>  
+        </div>  
       </div>
         `
             ;
